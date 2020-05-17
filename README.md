@@ -32,8 +32,7 @@ void swap(Vector<T>& other){
   
 - pop_back: panaikina paskutinį vektoriaus elementą;
 
-void pop_back()
-	{
+void pop_back(){
 		veksize = veksize - 1;
 		value_type* tmp = new value_type[maxsize];
 		for (int i = 0; i < veksize; i++)
