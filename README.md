@@ -3,12 +3,18 @@
 
 ## Funkcijų tikrinimas:
 
+- push_back: - įdeda naują elementą i vektoriaus galą;
+- swap: apkeičia du elementus vietomis;
+- pop_back: panaikina paskutinį vektoriaus elementą;
+- at(x): parodo elementą, esantį x pozicijoje;
+- clear: visi vektoriaus elementai yra sunaikinami;
+
 
 ## Efektyvumo/Spartos analizė naduojant sukurtą vectorių ir biblioteką:
 
 - Spartos analizė daryta naudojant Visual Studio;
 - iki gegužės 19d. deadline nepataisiau "bad_alloc" erroro, kurį metė ir negaliu skaičiuoti 100m el. vektoriaus.
-- Tolimesnius tyrimus bandysiu daryti su 10 mil. el, o vėliau taisysiu;
+- Tolimesnius perskirstymo tyrimus bandysiu daryti su 10 mil. el, o vėliau taisysiu;
 
 |        |  Sukurtas |   Senas   |
 | ------ | --------- | -------   |
