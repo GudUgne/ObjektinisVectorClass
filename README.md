@@ -4,11 +4,61 @@
 ## Funkcijų tikrinimas:
 
 - push_back: - įdeda naują elementą i vektoriaus galą;
+
+void push_back(value_type i){
+
+		if (veksize + 1 > maxsize)
+			alloc_new();
+		array[veksize] = i;
+		veksize++;
+	};
+  
 - swap: apkeičia du elementus vietomis;
+
+void swap(Vector<T>& other){
+  
+		size_t tvsize = veksize,
+			tmaxsize = maxsize;
+		T* tarray = array;
+
+		veksize = other.veksize;
+		maxsize = other.maxsize;
+		array = other.array;
+
+		other.veksize = tvsize;
+		other.maxsize = tmaxsize;
+		other.array = tarray;
+	}
+  
 - pop_back: panaikina paskutinį vektoriaus elementą;
+
+void pop_back()
+	{
+		veksize = veksize - 1;
+		value_type* tmp = new value_type[maxsize];
+		for (int i = 0; i < veksize; i++)
+			tmp[i] = array[i];
+		delete[] array;
+		array = tmp;
+	};
+  
 - at(x): parodo elementą, esantį x pozicijoje;
+
+value_type at(int i){
+
+		if (i < veksize)
+			return array[i];
+		throw std::out_of_range("out of range");
+	};
+
 - clear: visi vektoriaus elementai yra sunaikinami;
 
+void clear(){
+
+		veksize = 0;
+		delete[] array;
+		array = new value_type(maxsize);
+	};
 
 ## Efektyvumo/Spartos analizė naduojant sukurtą vectorių ir biblioteką:
 
