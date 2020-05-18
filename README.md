@@ -13,21 +13,21 @@ void push_back(value_type i){
 		veksize++;
 	};
   
-- swap: apkeičia du elementus vietomis;
+- swap: apkeičia du elementus vietomis naudojant temporary vektorių;
 
-void swap(Vector<T>& other){
+void swap(Vector<T>& kitas){
   
 		size_t tvsize = veksize,
-			tmaxsize = maxsize;
+		tmaxsize = maxsize;
 		T* tarray = array;
 
-		veksize = other.veksize;
-		maxsize = other.maxsize;
-		array = other.array;
+		veksize = kitas.veksize;
+		maxsize = kitas.maxsize;
+		array = kitas.array;
 
-		other.veksize = tvsize;
-		other.maxsize = tmaxsize;
-		other.array = tarray;
+		kitas.veksize = tvsize;
+		kitas.maxsize = tmaxsize;
+		kitas.array = tarray;
 	}
   
 - pop_back: panaikina paskutinį vektoriaus elementą;
