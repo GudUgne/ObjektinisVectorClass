@@ -78,4 +78,4 @@ void clear(){
 | ------ | --------- | -------   |
 | 100k   | 	     | 26.0116	 |
 
-- Klaidos iki gegužės 19d. aptikti nesugebėjau, ir negalėjau padaryti spartos analizės įdėjusi sukurtą vektorių į 2.0 versiją;
+- Įdėtas į 2.0 ver. naujas vektorius neveikė, toliau užduoties tęsti negalėjau;
