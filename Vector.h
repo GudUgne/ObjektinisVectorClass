@@ -243,16 +243,14 @@ public:
 
 	void resize(int sz){
 
-		if (sz > veksize)
-		{
-			if (sz > maxsize)
-			{
+		if (sz > veksize){
+			if (sz > maxsize){
 				maxsize = sz;
 				alloc_new();
 			}
 		}
-		else
-		{
+		
+		else{
 			size_type i;
 			for (i = veksize; i < sz; ++i)
 				array[i].~T();
@@ -262,10 +260,8 @@ public:
 
 	void resize(int sz, const T& c){
 
-		if (sz > veksize)
-		{
-			if (sz > maxsize)
-			{
+		if (sz > veksize){
+			if (sz > maxsize){
 				maxsize = sz;
 				alloc_new();
 			}
@@ -273,8 +269,7 @@ public:
 			for (i = veksize; i < sz; ++i)
 				array[i] = c;
 		}
-		else
-		{
+		else{
 			size_type i;
 			for (i = veksize; i < sz; ++i)
 				array[i].~T();
@@ -282,19 +277,19 @@ public:
 		veksize = sz;
 	}
 
-	void swap(Vector<T>& other){
+	void swap(Vector<T>& kitas){		//temporary vector
 
 		size_t tvsize = veksize,
-			tmaxsize = maxsize;
+		tmaxsize = maxsize;
 		T* tarray = array;
 
-		veksize = other.veksize;
-		maxsize = other.maxsize;
-		array = other.array;
+		veksize = kitas.veksize;
+		maxsize = kitas.maxsize;
+		array = kitas.array;
 
-		other.veksize = tvsize;
-		other.maxsize = tmaxsize;
-		other.array = tarray;
+		kitas.veksize = tvsize;
+		kitas.maxsize = tmaxsize;
+		kitas.array = tarray;
 	}
 
 
